@@ -9,3 +9,5 @@ ENV MYSQL_DATABASE=ssc_db MYSQL_USER=ssc_db MYSQL_PASSWORD=F0rt1fy! MYSQL_ROOT_P
 
 #for initialization only
 COPY $MY_FILES_DIR/* /docker-entrypoint-initdb.d/
+
+EXPOSE 3306

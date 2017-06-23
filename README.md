@@ -5,9 +5,10 @@ mysql database for SSC
 place the create-tables.sql for mysql databases in the files directory
 
 # Build
-```docker build --no-cache --tag <image_name> .```
+```docker build --no-cache --tag ${SSC_DB_IMG} .```
 
 # Run
-specify mysql conf file and data directory with -v option as below
-
-```docker run --name ssc_db -v /absolute/path/to/config/directory:/etc/mysql/conf.d -v /path/to/data/directory:/var/lib/mysql -d <image_name>```
+specify mysql conf file and data directories with -v option as below
+```
+docker run --name ${SSC_DB_CONT_NAME} --network=${NETWORK_HOST} --ip ${SSC_DB_IP} -v ${SSC_DB_CONF_DIR}:/etc/mysql/conf.d -v ${SSC_DB_DATA_DIR}:/var/lib/mysql -d ${SSC_DB_IMG}
+```
