@@ -5,7 +5,7 @@ LABEL maintainer "chunt"
 ARG MY_FILES_DIR=files
 
 # setting environment variables
-ENV MYSQL_DATABASE=ssc_db MYSQL_USER=ssc_db MYSQL_PASSWORD=F0rt1fy! MYSQL_ROOT_PASSWORD=F0rt1fy!
+ENV MYSQL_DATABASE=ssc_db MYSQL_USER=ssc_db MYSQL_PASSWORD=<PW> MYSQL_ROOT_PASSWORD=<PW>
 
 # for initialization or upgrade
 # place create-tables.sql or bkp.sql from a mysqldump
